@@ -1,0 +1,110 @@
+.session-page,
+.workspace-page {
+  padding: 32px 24px;
+  text-align: left;
+}
+
+.session-page {
+  display: grid;
+  place-items: center;
+  min-height: 85svh;
+}
+
+.session-card {
+  width: min(100%, 480px);
+}
+
+.session-card h1,
+.workspace-header h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin: 12px 0;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.session-card form {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.session-card select,
+.session-card button,
+.workspace-header button {
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px;
+  color: var(--text-h);
+  background: var(--bg);
+}
+
+.session-card select {
+  width: 100%;
+  min-width: 0;
+}
+
+.session-card button,
+.workspace-header button {
+  cursor: pointer;
+}
+
+.session-card button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.session-card :focus-visible,
+.workspace-page :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.session-note {
+  font-size: 14px;
+}
+
+.session-error {
+  padding: 12px;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-bg);
+}
+
+.workspace-header,
+.workspace-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.workspace-header {
+  justify-content: space-between;
+}
+
+.workspace-nav {
+  margin: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.workspace-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.workspace-nav a[aria-current="page"] {
+  color: var(--text-h);
+  border-bottom-color: var(--accent);
+}
+
+.workspace-content p {
+  margin-top: 16px;
+}
