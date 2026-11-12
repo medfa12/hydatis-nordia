@@ -96,4 +96,4 @@ Automated tests and test tooling were deliberately removed for now. **The brief'
 
 The calendar, real authentication, notifications, cancellation/editing, manager escalation, and deployment automation are omitted. This targets a small local demo, not a production deployment. The UI is intentionally simple. Lint may report a Fast Refresh warning because the session-provider file also exports its hook.
 
-See [DESIGN-NOTE.md](DESIGN-NOTE.md) and [AI-USAGE.md](AI-USAGE.md). Record actual working time and personal verification before submission. Exclude `node_modules`, `dist`, `storage`, `.env`, and `.git` from any source archive.
+See [DESIGN-NOTE.md](DESIGN-NOTE.md). Record actual working time and personal verification before submission. Exclude `node_modules`, `dist`, `storage`, `.env`, and `.git` from any source archive.
