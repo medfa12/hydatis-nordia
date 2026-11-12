@@ -25,7 +25,7 @@ I chose direct SQL over an ORM for two small tables, accepting manual schema evo
 
 ## Verification and cuts
 
-Type-checking and build checks are the current verification. Automated tests were removed by choice pending agreement on their scope, so the eight-test requirement remains unmet. A full end-to-end manual check, accessibility review, and concurrent-request verification are still needed. The calendar, notifications, editing/cancellation, real authentication, and manager escalation were cut to prioritize the required workflow. Supplied managers have no superior, so their own requests cannot be reviewed.
+Verification includes type-checking, build checks, and four API tests covering weekdays, approved-only allowance, overlaps, and advisory coverage. Interface tests remain to be selected, so the eight-test requirement remains unmet. A full end-to-end manual check, accessibility review, and multi-process contention verification are still needed. The calendar, notifications, editing/cancellation, real authentication, and manager escalation were cut to prioritize the required workflow. Supplied managers have no superior, so their own requests cannot be reviewed.
 
 ## One more day
 

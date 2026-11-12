@@ -90,9 +90,10 @@ The default file is `storage/nordia.sqlite`, excluded from Git. Initialization s
 npm run typecheck
 npm run build
 npm run lint
+npm test
 ```
 
-Automated tests and test tooling were deliberately removed for now. **The brief's requirement for at least eight tests is not yet satisfied.** Type-checking and a build do not verify business behavior; use the walkthrough above for manual checking. A final test scope remains to be agreed.
+Four API tests cover weekday counting, approved-only allowance checks at creation and approval, overlap rules, and advisory team coverage. They use Node's test runner, Supertest, and a fresh in-memory SQLite database per test. Run `npm test` or `npm run test:api`. Interface tests remain to be selected; **the brief's requirement for at least eight tests is not yet satisfied.** Use the walkthrough above for manual checking.
 
 The calendar, real authentication, notifications, cancellation/editing, manager escalation, and deployment automation are omitted. This targets a small local demo, not a production deployment. The UI is intentionally simple. Lint may report a Fast Refresh warning because the session-provider file also exports its hook.
 
