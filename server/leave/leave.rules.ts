@@ -16,7 +16,7 @@ export interface CoverageWarning {
   total: number;
 }
 
-const ANNUAL_ALLOWANCE = 25;
+export const ANNUAL_ALLOWANCE = 25;
 const COVERAGE_THRESHOLD = 0.4;
 
 function parseDate(value: string): Date {
