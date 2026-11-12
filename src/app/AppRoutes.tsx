@@ -1,6 +1,8 @@
 import { Navigate, NavLink, Outlet, Route, Routes } from "react-router-dom";
 import { AccountPicker } from "../session/AccountPicker";
 import { useSession } from "../session/SessionProvider";
+import { MyLeavePage } from "../features/leave/MyLeavePage";
+import { TeamRequestsPage } from "../features/reviews/TeamRequestsPage";
 
 function RequireEmployee() {
   const { employee } = useSession();
@@ -35,14 +37,6 @@ function WorkspaceLayout() {
       <section className="workspace-content"><Outlet /></section>
     </main>
   );
-}
-
-function MyLeavePage() {
-  return <><h2>My leave</h2><p>Your balance, request form, and history will appear here.</p></>;
-}
-
-function TeamRequestsPage() {
-  return <><h2>Team requests</h2><p>Requests from your direct reports will appear here for review.</p></>;
 }
 
 export function AppRoutes() {
