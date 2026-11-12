@@ -19,7 +19,17 @@ function WorkspaceLayout() {
   if (!employee) return <Navigate to="/login" replace />;
 
   return (
-    <main className="workspace-page">
+    <div className="workspace-shell">
+      <aside className="sidebar">
+        <div className="brand">nordia <span>✳</span></div>
+        <p className="workspace-label">YOUR WORKSPACE</p>
+        <nav className="sidebar-nav" aria-label="Workspace sections">
+          <NavLink to="/my-leave">My leave</NavLink>
+          {employee.role === "manager" && <NavLink to="/team/requests">Team requests</NavLink>}
+        </nav>
+        <div className="sidebar-bottom"><span aria-hidden="true">✳</span><h2>Make space<br />for life.</h2><p>Time away matters.</p></div>
+      </aside>
+      <main className="workspace-page">
       <header className="workspace-header">
         <div>
           <p className="eyebrow">NORDIA</p>
@@ -29,13 +39,14 @@ function WorkspaceLayout() {
         <button type="button" onClick={signOut}>Switch account</button>
       </header>
 
-      <nav className="workspace-nav" aria-label="Workspace sections">
+      <nav className="workspace-nav" aria-label="Workspace sections (mobile)">
         <NavLink to="/my-leave">My leave</NavLink>
         {employee.role === "manager" && <NavLink to="/team/requests">Team requests</NavLink>}
       </nav>
 
       <section className="workspace-content"><Outlet /></section>
-    </main>
+      </main>
+    </div>
   );
 }
 

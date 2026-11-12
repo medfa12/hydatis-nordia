@@ -39,6 +39,12 @@ export function AccountPicker() {
 
   return (
     <main className="session-page">
+      <aside className="login-story" aria-label="Nordia">
+        <div className="brand">nordia <span>✳</span></div>
+        <div><p className="eyebrow">A LITTLE ROOM TO BREATHE</p><h1>Time away,<br />made simple.</h1><p>A thoughtful space for planning time off.</p></div>
+        <p className="company-label">NORDIA · PEOPLE FIRST</p>
+      </aside>
+      <div className="login-content">
       <section className="session-card" aria-labelledby="login-heading">
         <p className="eyebrow">NORDIA · DEMO WORKSPACE</p>
         <h1 id="login-heading">Choose your account</h1>
@@ -81,6 +87,7 @@ export function AccountPicker() {
         {!accountsLoading && !accountsError && accounts.length === 0 && <p>No demo accounts are available.</p>}
         <p className="session-note">Demo identity selection only. Refreshing the page returns you to login.</p>
       </section>
+      </div>
     </main>
   );
 }
