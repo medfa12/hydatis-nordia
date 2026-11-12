@@ -93,7 +93,7 @@ npm run lint
 npm test
 ```
 
-Four API tests cover weekday counting, approved-only allowance checks at creation and approval, overlap rules, and advisory team coverage. They use Node's test runner, Supertest, and a fresh in-memory SQLite database per test. Run `npm test` or `npm run test:api`. Interface tests remain to be selected; **the brief's requirement for at least eight tests is not yet satisfied.** Use the walkthrough above for manual checking.
+Eight tests cover the API and interface. Four API tests check weekday counting, approved-only allowance at creation and approval, overlaps, and advisory team coverage. They use Node's test runner, Supertest, and a fresh in-memory SQLite database per test; the saved demo database is never used. Four interface tests check account navigation, successful submission/history, submission errors with preserved input, and required comments plus approval/rejection updates. These use Vitest and React Testing Library with mocked `fetch` responses; they do not start the backend or access a database. Mock request data is reset before each test. Run everything with `npm test`, or separately with `npm run test:api` and `npm run test:ui`. Use the walkthrough above for manual checking.
 
 The calendar, real authentication, notifications, cancellation/editing, manager escalation, and deployment automation are omitted. This targets a small local demo, not a production deployment. The UI is intentionally simple. Lint may report a Fast Refresh warning because the session-provider file also exports its hook.
 

@@ -25,8 +25,8 @@ I chose direct SQL over an ORM for two small tables, accepting manual schema evo
 
 ## Verification and cuts
 
-Verification includes type-checking, build checks, and four API tests covering weekdays, approved-only allowance, overlaps, and advisory coverage. Interface tests remain to be selected, so the eight-test requirement remains unmet. A full end-to-end manual check, accessibility review, and multi-process contention verification are still needed. The calendar, notifications, editing/cancellation, real authentication, and manager escalation were cut to prioritize the required workflow. Supplied managers have no superior, so their own requests cannot be reviewed.
+Verification includes type-checking, build checks, and eight automated tests. Four API tests use isolated in-memory SQLite databases to check weekdays, approved-only allowance, overlaps, and advisory coverage. Four interface tests mock HTTP responses to check navigation, submission/history, errors, and manager decisions. A full end-to-end manual check, accessibility review, and multi-process contention verification are still needed. The calendar, notifications, editing/cancellation, real authentication, and manager escalation were cut to prioritize the required workflow. Supplied managers have no superior, so their own requests cannot be reviewed.
 
 ## One more day
 
-With one more day, I would first add the required API/UI tests and complete the manual workflow check, then improve accessibility and consider the calendar. Actual working time and personal verification should be recorded before submission.
+With one more day, I would complete the manual workflow check and add broader integration coverage, then improve accessibility and consider the calendar. Actual working time and personal verification should be recorded before submission.

@@ -10,7 +10,8 @@
     "start": "tsx --env-file-if-exists=.env server/index.ts",
     "typecheck": "tsc -b",
     "test:api": "tsx --test server/leave/leave.api.test.ts",
-    "test": "npm run test:api",
+    "test:ui": "vitest run",
+    "test": "npm run test:api && npm run test:ui",
     "build": "npm run typecheck && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
@@ -22,6 +23,8 @@
     "react-router-dom": "^7.18.5"
   },
   "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.10",
     "@types/express": "^5.0.6",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
@@ -29,10 +32,12 @@
     "@types/supertest": "^7.2.1",
     "@vitejs/plugin-react": "^6.1.2",
     "concurrently": "^10.0.7",
+    "jsdom": "^31.0.0",
     "oxlint": "^1.90.0",
     "supertest": "^7.3.2",
     "tsx": "^4.23.15",
     "typescript": "~7.0.2",
-    "vite": "^8.3.6"
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
   }
 }
